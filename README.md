@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Cookie-Clicker
-=======
->>>>>>> 17e3429ddd8368e8db5960bf04adc500e4652459
 # Cookie-Clicker - Indicate authors and license
 
 This game is based on game "Cookie Clicker" (https://orteil.dashnet.org/cookieclicker/) created by Orteil (https://orteil.dashnet.org/) and Opti (https://dashnet.org/). The application uses https://creativecommons.org/licenses/by-sa/3.0/deed.en license. This application will be still open on modifications and never used for commercial purposes. The application uses some graphics from the original game.
