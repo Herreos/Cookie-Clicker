@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B88AFF8-C7E5-47C5-93A3-3E6151FE6D31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CookieClicker</RootNamespace>
+    <AssemblyName>CookieClicker</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Buildings\AlchemyLabBuilding.cs" />
+    <Compile Include="Buildings\AtomGeneratorBuilding.cs" />
+    <Compile Include="Buildings\BankBuilding.cs" />
+    <Compile Include="Buildings\ChancemakerBuilding.cs" />
+    <Compile Include="Buildings\CSharpConsoleBuilding.cs" />
+    <Compile Include="Buildings\FactoryBuilding.cs" />
+    <Compile Include="Buildings\FractalEngineBuilding.cs" />
+    <Compile Include="Buildings\IdleverseBuilding.cs" />
+    <Compile Include="Buildings\PortalBuilding.cs" />
+    <Compile Include="Buildings\PrismBuilding.cs" />
+    <Compile Include="Buildings\ShipmentBuilding.cs" />
+    <Compile Include="Buildings\TempleBuilding.cs" />
+    <Compile Include="Buildings\TimeMachineBuilding.cs" />
+    <Compile Include="Buildings\WizardTowerBuilding.cs" />
+    <Compile Include="MenuWindow.xaml.cs">
+      <DependentUpon>MenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Upgrades\AlchemyLab\AlchemyLabUpgrades.cs" />
+    <Compile Include="Upgrades\AlchemyLab\TwentyFiveAlchemyLabsUpgrade.cs" />
+    <Compile Include="Upgrades\AlchemyLab\FifteenAlchemyLabsUpgrade.cs" />
+    <Compile Include="Upgrades\AlchemyLab\FiftyAlchemyLabsUpgrade.cs" />
+    <Compile Include="Upgrades\AlchemyLab\SeventyFiveAlchemyLabsUpgrade.cs" />
+    <Compile Include="Upgrades\AlchemyLab\OneHundredAlchemyLabsUpgrade.cs" />
+    <Compile Include="Upgrades\AlchemyLab\OneHundredFiftyAlchemyLabsUpgrade.cs" />
+    <Compile Include="Upgrades\AlchemyLab\FiveAlchemyLabsUpgrade.cs" />
+    <Compile Include="Upgrades\AtomGenerator\AtomGeneratorUpgrades.cs" />
+    <Compile Include="Upgrades\AtomGenerator\TwentyFiveAtomGeneratorsUpgrade.cs" />
+    <Compile Include="Upgrades\AtomGenerator\FiftyAtomGeneratorsUpgrade.cs" />
+    <Compile Include="Upgrades\AtomGenerator\SeventyFiveAtomGeneratorsUpgrade.cs" />
+    <Compile Include="Upgrades\AtomGenerator\OneHundredAtomGeneratorsUpgrade.cs" />
+    <Compile Include="Upgrades\AtomGenerator\OneHundredFiftyAtomGeneratorsUpgrade.cs" />
+    <Compile Include="Upgrades\AtomGenerator\FifteenAtomGeneratorsUpgrade.cs" />
+    <Compile Include="Upgrades\AtomGenerator\FiveAtomGeneratorsUpgrade.cs" />
+    <Compile Include="Upgrades\Bank\BankUpgrades.cs" />
+    <Compile Include="Upgrades\Bank\TwentyFiveBanksUpgrade.cs" />
+    <Compile Include="Upgrades\Bank\FiftyBanksUpgrade.cs" />
+    <Compile Include="Upgrades\Bank\SeventyFiveBanksUpgrade.cs" />
+    <Compile Include="Upgrades\Bank\OneHundredBanksUpgrade.cs" />
+    <Compile Include="Upgrades\Bank\OneHundredFiftyBanksUpgrade.cs" />
+    <Compile Include="Upgrades\Bank\FifteenBanksUpgrade.cs" />
+    <Compile Include="Upgrades\Bank\FiveBanksUpgrade.cs" />
+    <Compile Include="Upgrades\Chancemaker\ChancemakerUpgrades.cs" />
+    <Compile Include="Upgrades\Chancemaker\TwentyFiveChancemakersUpgrade.cs" />
+    <Compile Include="Upgrades\Chancemaker\FiftyChancemakersUpgrade.cs" />
+    <Compile Include="Upgrades\Chancemaker\SeventyFiveChancemakersUpgrade.cs" />
+    <Compile Include="Upgrades\Chancemaker\OneHundredChancemakersUpgrade.cs" />
+    <Compile Include="Upgrades\Chancemaker\OneHundredFiftyChancemakersUpgrade.cs" />
+    <Compile Include="Upgrades\Chancemaker\FifteenChancemakersUpgrade.cs" />
+    <Compile Include="Upgrades\Chancemaker\FiveChancemakersUpgrade.cs" />
+    <Compile Include="Upgrades\CSharpConsole\CSharpConsoleUpgrades.cs" />
+    <Compile Include="Upgrades\CSharpConsole\TwentyFiveCSharpConsolesUpgrade.cs" />
+    <Compile Include="Upgrades\CSharpConsole\FiftyCSharpConsolesUpgrade.cs" />
+    <Compile Include="Upgrades\CSharpConsole\SeventyFiveCSharpConsolesUpgrade.cs" />
+    <Compile Include="Upgrades\CSharpConsole\OneHundredCSharpConsolesUpgrade.cs" />
+    <Compile Include="Upgrades\CSharpConsole\OneHundredFiftyCSharpConsolesUpgrade.cs" />
+    <Compile Include="Upgrades\CSharpConsole\FifteenCSharpConsolesUpgrade.cs" />
+    <Compile Include="Upgrades\CSharpConsole\FiveCSharpConsolesUpgrade.cs" />
+    <Compile Include="Upgrades\Cursor\CursorUpgrades.cs" />
+    <Compile Include="Upgrades\Cursor\SeventyFiveCursorsUpgrade.cs" />
+    <Compile Include="Upgrades\Cursor\OneHundredCursorsUpgrade.cs" />
+    <Compile Include="Upgrades\Cursor\OneHundredFiftyCursorsUpgrade.cs" />
+    <Compile Include="Upgrades\Cursor\FifteenCursorsUpgrade.cs" />
+    <Compile Include="Upgrades\Cursor\FiftyCursorsUpgrade.cs" />
+    <Compile Include="Upgrades\Cursor\FiveCursorsUpgrade.cs" />
+    <Compile Include="Upgrades\Cursor\TwentyFiveCursorsUpgrade.cs" />
+    <Compile Include="Upgrades\Factory\FactoryUpgrades.cs" />
+    <Compile Include="Upgrades\Factory\TwentyFiveFactoriesUpgrade.cs" />
+    <Compile Include="Upgrades\Factory\FiftyFactoriesUpgrade.cs" />
+    <Compile Include="Upgrades\Factory\SeventyFiveFactoriesUpgrade.cs" />
+    <Compile Include="Upgrades\Factory\OneHundredFactoriesUpgrade.cs" />
+    <Compile Include="Upgrades\Factory\OneHundredFiftyFactoriesUpgrade.cs" />
+    <Compile Include="Upgrades\Factory\FifteenFactoriesUpgrade.cs" />
+    <Compile Include="Upgrades\Factory\FiveFactoriesUpgrade.cs" />
+    <Compile Include="Upgrades\Farm\FarmUpgrades.cs" />
+    <Compile Include="Upgrades\Farm\TwentyFiveFarmsUpgrade.cs" />
+    <Compile Include="Upgrades\Farm\FiftyFarmsUpgrade.cs" />
+    <Compile Include="Upgrades\Farm\SeventyFiveFarmsUpgrade.cs" />
+    <Compile Include="Upgrades\Farm\OneHundredFarmsUpgrade.cs" />
+    <Compile Include="Upgrades\Farm\OneHundredFiftyFarmsUpgrade.cs" />
+    <Compile Include="Upgrades\Farm\FifteenFarmsUpgrade.cs" />
+    <Compile Include="Upgrades\Farm\FiveFarmsUpgrade.cs" />
+    <Compile Include="Upgrades\FractalEngine\TwentyFiveFractalEnginesUpgrade.cs" />
+    <Compile Include="Upgrades\FractalEngine\FiftyFractalEnginesUpgrade.cs" />
+    <Compile Include="Upgrades\FractalEngine\SeventyFiveFractalEnginesUpgrade.cs" />
+    <Compile Include="Upgrades\FractalEngine\OneHundredFractalEnginesUpgrade.cs" />
+    <Compile Include="Upgrades\FractalEngine\OneHundredFiftyFractalEnginesUpgrade.cs" />
+    <Compile Include="Upgrades\FractalEngine\FifteenFractalEnginesUpgrade.cs" />
+    <Compile Include="Upgrades\FractalEngine\FiveFractalEnginesUpgrade.cs" />
+    <Compile Include="Upgrades\FractalEngine\FractalEngineUpgrades.cs" />
+    <Compile Include="Upgrades\Grandma\FiftyGrandmasUpgrade.cs" />
+    <Compile Include="Upgrades\Grandma\SeventyFiveGrandmasUpgrade.cs" />
+    <Compile Include="Upgrades\Grandma\OneHundredGrandmasUpgrade.cs" />
+    <Compile Include="Upgrades\Grandma\OneHundredFiftyGrandmasUpgrade.cs" />
+    <Compile Include="Upgrades\Grandma\FifteenGrandmasUpgrade.cs" />
+    <Compile Include="Upgrades\Grandma\FiveGrandmasUpgrade.cs" />
+    <Compile Include="Upgrades\Grandma\GrandmaUpgrades.cs" />
+    <Compile Include="Upgrades\Grandma\TwentyFiveGrandmasUpgrade.cs" />
+    <Compile Include="Upgrades\Idleverse\TwentyFiveIdleversesUpgrade.cs" />
+    <Compile Include="Upgrades\Idleverse\FiftyIdleversesUpgrade.cs" />
+    <Compile Include="Upgrades\Idleverse\SeventyFiveIdleversesUpgrade.cs" />
+    <Compile Include="Upgrades\Idleverse\OneHundredIdleversesUpgrade.cs" />
+    <Compile Include="Upgrades\Idleverse\OneHundredFiftyIdleversesUpgrade.cs" />
+    <Compile Include="Upgrades\Idleverse\FifteenIdleversesUpgrade.cs" />
+    <Compile Include="Upgrades\Idleverse\FiveIdleversesUpgrade.cs" />
+    <Compile Include="Upgrades\Idleverse\IdleverseUpgrades.cs" />
+    <Compile Include="Upgrades\Mine\TwentyFiveMinesUpgrade.cs" />
+    <Compile Include="Upgrades\Mine\FiftyMinesUpgrade.cs" />
+    <Compile Include="Upgrades\Mine\SeventyFiveMinesUpgrade.cs" />
+    <Compile Include="Upgrades\Mine\OneHundredMinesUpgrade.cs" />
+    <Compile Include="Upgrades\Mine\OneHundredFiftyMinesUpgrade.cs" />
+    <Compile Include="Upgrades\Mine\FifteenMinesUpgrade.cs" />
+    <Compile Include="Upgrades\Mine\FiveMinesUpgrade.cs" />
+    <Compile Include="Upgrades\Mine\MineUpgrades.cs" />
+    <Compile Include="Upgrades\Portal\TwentyFivePortalsUpgrade.cs" />
+    <Compile Include="Upgrades\Portal\FiftyPortalsUpgrade.cs" />
+    <Compile Include="Upgrades\Portal\SeventyFivePortalsUpgrade.cs" />
+    <Compile Include="Upgrades\Portal\OneHundredPortalsUpgrade.cs" />
+    <Compile Include="Upgrades\Portal\OneHundredFiftyPortalsUpgrade.cs" />
+    <Compile Include="Upgrades\Portal\FifteenPortalsUpgrade.cs" />
+    <Compile Include="Upgrades\Portal\FivePortalsUpgrade.cs" />
+    <Compile Include="Upgrades\Portal\PortalUpgrades.cs" />
+    <Compile Include="Upgrades\Prism\TwentyFivePrismsUpgrade.cs" />
+    <Compile Include="Upgrades\Prism\FiftyPrismsUpgrade.cs" />
+    <Compile Include="Upgrades\Prism\SeventyFivePrismsUpgrade.cs" />
+    <Compile Include="Upgrades\Prism\OneHundredPrismsUpgrade.cs" />
+    <Compile Include="Upgrades\Prism\OneHundredFiftyPrismsUpgrade.cs" />
+    <Compile Include="Upgrades\Prism\FifteenPrismsUpgrade.cs" />
+    <Compile Include="Upgrades\Prism\FivePrismsUpgrade.cs" />
+    <Compile Include="Upgrades\Prism\PrismUpgrades.cs" />
+    <Compile Include="Upgrades\Shipment\TwentyFiveShipmentsUpgrade.cs" />
+    <Compile Include="Upgrades\Shipment\FiftyShipmentsUpgrade.cs" />
+    <Compile Include="Upgrades\Shipment\SeventyFiveShipmentsUpgrade.cs" />
+    <Compile Include="Upgrades\Shipment\OneHundredShipmentsUpgrade.cs" />
+    <Compile Include="Upgrades\Shipment\OneHundredFiftyShipmentsUpgrade.cs" />
+    <Compile Include="Upgrades\Shipment\FifteenShipmentsUpgrade.cs" />
+    <Compile Include="Upgrades\Shipment\FiveShipmentsUpgrade.cs" />
+    <Compile Include="Upgrades\Shipment\ShipmentUpgrades.cs" />
+    <Compile Include="Upgrades\Temple\TwentyFiveTemplesUpgrade.cs" />
+    <Compile Include="Upgrades\Temple\FiftyTemplesUpgrade.cs" />
+    <Compile Include="Upgrades\Temple\SeventyFiveTemplesUpgrade.cs" />
+    <Compile Include="Upgrades\Temple\OneHundredTemplesUpgrade.cs" />
+    <Compile Include="Upgrades\Temple\OneHundredFiftyTemplesUpgrade.cs" />
+    <Compile Include="Upgrades\Temple\FifteenTemplesUpgrade.cs" />
+    <Compile Include="Upgrades\Temple\FiveTemplesUpgrade.cs" />
+    <Compile Include="Upgrades\Temple\TempleUpgrades.cs" />
+    <Compile Include="Upgrades\TimeMachine\TwentyFiveTimeMachinesUpgrade.cs" />
+    <Compile Include="Upgrades\TimeMachine\FiftyTimeMachinesUpgrade.cs" />
+    <Compile Include="Upgrades\TimeMachine\SeventyFiveTimeMachinesUpgrade.cs" />
+    <Compile Include="Upgrades\TimeMachine\OneHundredTimeMachinesUpgrade.cs" />
+    <Compile Include="Upgrades\TimeMachine\OneHundredFiftyTimeMachinesUpgrade.cs" />
+    <Compile Include="Upgrades\TimeMachine\FifteenTimeMachinesUpgrade.cs" />
+    <Compile Include="Upgrades\TimeMachine\FiveTimeMachinesUpgrade.cs" />
+    <Compile Include="Upgrades\TimeMachine\TimeMachineUpgrades.cs" />
+    <Compile Include="Upgrades\Upgrade.cs" />
+    <Compile Include="Upgrades\WizardTower\TwentyFiveWizardTowersUpgrade.cs" />
+    <Compile Include="Upgrades\WizardTower\FiftyWizardTowersUpgrade.cs" />
+    <Compile Include="Upgrades\WizardTower\SeventyFiveWizardTowersUpgrade.cs" />
+    <Compile Include="Upgrades\WizardTower\OneHundredWizardTowersUpgrade.cs" />
+    <Compile Include="Upgrades\WizardTower\OneHundredFiftyWizardTowersUpgrade.cs" />
+    <Compile Include="Upgrades\WizardTower\FifteenWizardTowersUpgrade.cs" />
+    <Compile Include="Upgrades\WizardTower\FiveWizardTowersUpgrade.cs" />
+    <Compile Include="Upgrades\WizardTower\WizardTowerUpgrades.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Buildings\Building.cs" />
+    <Compile Include="Buildings\CursorBuilding.cs" />
+    <Compile Include="Buildings\FarmBuilding.cs" />
+    <Compile Include="Buildings\GrandmaBuilding.cs" />
+    <Compile Include="Buildings\MineBuilding.cs" />
+    <Compile Include="CookieProduction\MainCookie.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CookieImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Upgrades\AlchemyLabImage.png" />
+    <Resource Include="Images\Upgrades\AtomGeneratorImage.png" />
+    <Resource Include="Images\Upgrades\BankImage.png" />
+    <Resource Include="Images\Upgrades\ChancemakerImage.png" />
+    <Resource Include="Images\Upgrades\CSharpConsoleImage.png" />
+    <Resource Include="Images\Upgrades\CursorImage.png" />
+    <Resource Include="Images\Upgrades\FactoryImage.png" />
+    <Resource Include="Images\Upgrades\FarmImage.png" />
+    <Resource Include="Images\Upgrades\FractalEngineImage.png" />
+    <Resource Include="Images\Upgrades\GrandmaImage.png" />
+    <Resource Include="Images\Upgrades\IdleverseImage.png" />
+    <Resource Include="Images\Upgrades\MineImage.png" />
+    <Resource Include="Images\Upgrades\PortalImage.png" />
+    <Resource Include="Images\Upgrades\PrismImage.png" />
+    <Resource Include="Images\Upgrades\ShipmentImage.png" />
+    <Resource Include="Images\Upgrades\TempleImage.png" />
+    <Resource Include="Images\Upgrades\TimeMachineImage.png" />
+    <Resource Include="Images\Upgrades\WizardTowerImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CookieBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Buildings\AlchemyLabImage.png" />
+    <Resource Include="Images\Buildings\AtomGeneratorImage.png" />
+    <Resource Include="Images\Buildings\BankImage.png" />
+    <Resource Include="Images\Buildings\BuildingBackground.png" />
+    <Resource Include="Images\Buildings\ChancemakerImage.png" />
+    <Resource Include="Images\Buildings\CSharpConsoleImage.png" />
+    <Resource Include="Images\Buildings\CursorImage.png" />
+    <Resource Include="Images\Buildings\FactoryImage.png" />
+    <Resource Include="Images\Buildings\FarmImage.png" />
+    <Resource Include="Images\Buildings\FractalEngineImage.png" />
+    <Resource Include="Images\Buildings\GrandmaImage.png" />
+    <Resource Include="Images\Buildings\IdleverseImage.png" />
+    <Resource Include="Images\Buildings\MineImage.png" />
+    <Resource Include="Images\Buildings\PortalImage.png" />
+    <Resource Include="Images\Buildings\PrismImage.png" />
+    <Resource Include="Images\Buildings\ShipmentImage.png" />
+    <Resource Include="Images\Buildings\TempleImage.png" />
+    <Resource Include="Images\Buildings\TimeMachineImage.png" />
+    <Resource Include="Images\Buildings\WizardTowerImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Upgrades\CookieBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BackgroundUnderCookie.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
